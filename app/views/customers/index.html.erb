@@ -1,7 +1,5 @@
-<h1>Customers</h1>
+<h3 class="title is-4">All Customers</h3>
 
-<ul>
-  <% @customers.each do |cust| %>
-    <li><%= cust.full_name %></li>
-  <% end %>
-</ul>
+<% @customers.each do | cust | %>
+  <p><%= link_to cust.full_name, cust %></p>
+<% end %>

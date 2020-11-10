@@ -1,7 +1,9 @@
 class CustomersController < ApplicationController
   def index
-    @customers = Customer.all
+    @customers = Customer.order(:full_name)
   end
 
-  def show; end
+  def show
+    @customer = Customer.find(params[:id])
+  end
 end
